@@ -1,12 +1,215 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>居酒屋 すずの木 — 神田佐久間町</title>
+  <meta name="description" content="神田佐久間町の昭和レトロで旅館のような落ち着いた居酒屋「すずの木」。季節の肴と地酒をどうぞ。" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7efe6; /* 和紙っぽい背景 */
+      --wood:#6b3f26; /* 木目 */
+      --accent:#c77b3a; /* 飴色 */
+      --muted:#6a5a4a;
+      --card:#fffaf3;
+    }
+    *{box-sizing:border-box}
+    body{font-family:'Noto Sans JP', sans-serif;background:var(--bg);color:var(--muted);margin:0;line-height:1.6}
+    header{background:linear-gradient(180deg, rgba(107,63,38,0.95), rgba(199,123,58,0.95));color:#fff;padding:28px 16px;position:relative}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .leaf{width:56px;height:56px;border-radius:8px;background:#fff8f0;display:flex;align-items:center;justify-content:center;color:var(--wood);font-weight:700;font-family:'Noto Serif JP',serif;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+    h1{font-family:'Noto Serif JP', serif;margin:0;font-size:1.6rem}
+    p.lead{margin:6px 0 0;opacity:0.95}
+    nav{margin-top:14px}
+    .nav-links{display:flex;gap:14px;flex-wrap:wrap}
+    .nav-links a{color:rgba(255,255,255,0.95);text-decoration:none;padding:8px 10px;border-radius:6px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:center;margin-top:20px}
+    .hero-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.07)}
+    .intro{font-family:'Noto Serif JP',serif;color:var(--wood);font-size:1.05rem}
+    .info{background:rgba(255,255,255,0.06);padding:12px;border-radius:8px}
+    .btn{display:inline-block;background:var(--wood);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+
+    main{padding:34px 16px}
+    section{margin-bottom:36px}
+    h2{font-family:'Noto Serif JP',serif;color:var(--wood);margin-bottom:8px}
+
+    /* menu list */
+    .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .dish{background:#fff;border-radius:10px;padding:12px;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+    .dish h3{margin:0;font-size:1rem;color:var(--wood)}
+    .price{color:var(--accent);font-weight:700}
+
+    /* gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+
+    /* access */
+    .map{background:#eee;height:200px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#888}
+
+    footer{background:#fff7f0;padding:20px 16px;border-top:1px solid rgba(0,0,0,0.04)}
+    .flex{display:flex;gap:16px;align-items:center}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:520px){
+      .gallery{grid-template-columns:1fr}
+      h1{font-size:1.2rem}
+    }
+
+    /* subtle paper texture */
+    body::after{content:'';position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(transparent 0%, rgba(0,0,0,0.015) 100%);mix-blend-mode:overlay}
+  </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Pages Site</h1>
-    <p>This is my first GitHub Pages deployment!</p>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <div class="leaf">鈴</div>
+        <div>
+          <h1>居酒屋 すずの木</h1>
+          <p class="lead">昭和の旅館を思わせる、落ち着いた和の空間。季節の肴と地酒を。</p>
+        </div>
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="#about">お店について</a>
+          <a href="#menu">お品書き</a>
+          <a href="#gallery">ギャラリー</a>
+          <a href="#access">アクセス</a>
+          <a href="#contact">予約・問い合わせ</a>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <div class="hero-card">
+          <p class="intro">木のぬくもりと障子の柔らかな光――昭和な旅館のような雰囲気で、肩肘張らずに楽しめる居酒屋です。カウンター席とお座敷席がございます。地元の旬食材を使った小皿料理と、日本各地の地酒を揃えています。</p>
+          <div style="margin-top:12px" class="flex">
+            <a class="btn" href="#menu">おすすめを見る</a>
+            <a class="btn" href="#contact" style="background:var(--accent)">予約する</a>
+          </div>
+        </div>
+
+        <aside>
+          <div class="info hero-card">
+            <strong>住所</strong>
+            <div>東京都千代田区神田佐久間町3丁目</div>
+            <hr style="margin:10px 0;border:none;border-top:1px dashed rgba(0,0,0,0.06)"/>
+            <strong>電話</strong>
+            <div>03-xxxx-xxxx（※仮）</div>
+            <hr style="margin:10px 0;border:none;border-top:1px dashed rgba(0,0,0,0.06)"/>
+            <strong>営業時間</strong>
+            <div>17:00 — 23:30（L.O. 23:00）</div>
+            <div style="font-size:0.9rem;margin-top:8px;color:#7b6a5b">定休日：日曜（変更可）</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>お店について</h2>
+      <p>「すずの木」は、昭和の趣を残す内装と、旅館のような落ち着いたもてなしが特徴の小さな居酒屋です。カウンター越しに店主が腕を振るい、常連のお客様と会話が弾む温かい空間を大切にしています。</p>
+    </section>
+
+    <section id="menu">
+      <h2>お品書き（抜粋）</h2>
+      <div class="menu-grid">
+        <div class="dish">
+          <h3>だし巻き卵</h3>
+          <div>ふんわり出汁の香り <span class="price">¥650</span></div>
+        </div>
+        <div class="dish">
+          <h3>お造り盛り合わせ（小）</h3>
+          <div>旬の鮮魚を店主の目利きで <span class="price">¥1,200</span></div>
+        </div>
+        <div class="dish">
+          <h3>鶏の香草揚げ</h3>
+          <div>カリッとジューシー <span class="price">¥780</span></div>
+        </div>
+        <div class="dish">
+          <h3>季節の煮物</h3>
+          <div>ほっとする味わい <span class="price">¥600</span></div>
+        </div>
+        <div class="dish">
+          <h3>おにぎり（梅／鮭）</h3>
+          <div>〆に最適 <span class="price">¥300</span></div>
+        </div>
+        <div class="dish">
+          <h3>冷やしトマト</h3>
+          <div>さっぱりとした一品 <span class="price">¥450</span></div>
+        </div>
+      </div>
+      <p style="margin-top:10px;color:#7b6a5b">※本ページはデモです。実際のメニュー・価格は店舗でご確認ください。</p>
+    </section>
+
+    <section id="gallery">
+      <h2>ギャラリー</h2>
+      <div class="gallery">
+        <img src="https://placehold.jp/600x400.png?text=%E5%BA%97%E5%86%85" alt="店内イメージ1">
+        <img src="https://placehold.jp/600x400.png?text=%E6%96%99%E7%90%86" alt="料理イメージ">
+        <img src="https://placehold.jp/600x400.png?text=%E5%A4%96%E8%A6%B3" alt="外観イメージ">
+      </div>
+    </section>
+
+    <section id="access">
+      <h2>アクセス</h2>
+      <p>JR山手線・京浜東北線「秋葉原駅」昭和通り口から徒歩約6分。都営新宿線 小川町駅・東京メトロ日比谷線 仲御徒町駅からもアクセス可能です。</p>
+      <div class="map" aria-hidden="true">[地図をここに埋め込み]</div>
+      <ul style="margin-top:8px;color:#6a5a4a">
+        <li>住所：東京都千代田区神田佐久間町3丁目</li>
+        <li>最寄り駅：秋葉原駅（徒歩約6分）</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>予約・お問い合わせ</h2>
+      <p>ご予約はお電話にて承ります。混雑時はお席が取れない場合がございますので、事前のご連絡をおすすめします。</p>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+        <div style="flex:1;min-width:260px;background:var(--card);padding:12px;border-radius:10px;box-shadow:0 6px 14px rgba(0,0,0,0.04)">
+          <strong>TEL</strong>
+          <div style="margin:8px 0;font-size:1.1rem">03-xxxx-xxxx</div>
+          <div style="font-size:0.95rem;color:#6a5a4a">受付時間：16:00〜22:30</div>
+        </div>
+
+        <form style="flex:1;min-width:260px;background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 14px rgba(0,0,0,0.04)" onsubmit="event.preventDefault();alert('お問い合わせありがとうございます。実際に送信するにはメール設定が必要です（デモ）。');">
+          <label style="display:block;margin-bottom:6px;font-weight:700;color:var(--wood)">お名前</label>
+          <input type="text" placeholder="例：山田 太郎" required style="width:100%;padding:10px;border:1px solid #eee;border-radius:6px;margin-bottom:8px">
+          <label style="display:block;margin-bottom:6px;font-weight:700;color:var(--wood)">電話番号</label>
+          <input type="tel" placeholder="例：03-xxxx-xxxx" required style="width:100%;padding:10px;border:1px solid #eee;border-radius:6px;margin-bottom:8px">
+          <label style="display:block;margin-bottom:6px;font-weight:700;color:var(--wood)">ご要望・備考</label>
+          <textarea placeholder="人数・希望時間など" style="width:100%;padding:10px;border:1px solid #eee;border-radius:6px;height:80px"></textarea>
+          <div style="margin-top:10px;text-align:right"><button class="btn" style="background:var(--wood);border:none">送信（デモ）</button></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+      <div>
+        <strong>居酒屋 すずの木</strong>
+        <div style="font-size:0.9rem;color:#7b6a5b">東京都千代田区神田佐久間町3丁目</div>
+      </div>
+      <div style="text-align:right;font-size:0.9rem;color:#7b6a5b">&copy; 2025 すずの木</div>
+    </div>
+  </footer>
+
+  <script>
+    // シンプルなスムーススクロール（アンカーリンク）
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();const t=document.querySelector(a.getAttribute('href'));
+        if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  </script>
 </body>
 </html>
+
